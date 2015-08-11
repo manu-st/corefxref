@@ -19,7 +19,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     <Target Name="_CheckForInvalidTargetFrameworkProfile"
             AfterTargets="_CheckForInvalidConfigurationAndPlatform">
 
-		<!-- commented out since not used for our test. -->
+		<!-- Commented out since it is causing some issue in building a layout that will be understood by MsBuild -->
 		<!--
         <Error Condition="'$(TargetFrameworkProfile)' == ''" Text="The TargetFrameworkProfile property is not set for project '$(MSBuildProjectFile)'. Portable projects must specify a profile."/>
 		-->

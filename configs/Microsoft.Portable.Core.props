@@ -19,12 +19,8 @@ Copyright (C) Microsoft Corporation. All rights reserved.
         <TargetPlatformIdentifier>CoreFX</TargetPlatformIdentifier>
         <TargetFrameworkIdentifier>CoreCLR</TargetFrameworkIdentifier>
         <TargetFrameworkMonikerDisplayName>Core CLR</TargetFrameworkMonikerDisplayName>
-		<TargetFrameworkRootPath>c:\work\CoreFX</TargetFrameworkRootPath>
-		<FrameworkPathOverride>C:\work\CoreFX\CoreCLR\v5.0</FrameworkPathOverride>
-		<TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
-		<AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
-		<NoStdLib>true</NoStdLib>
-
+        <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+        <NoStdLib>true</NoStdLib>
 
         <!-- Automatically reference all assemblies in the target framework -->
         <ImplicitlyExpandTargetFramework Condition="'$(ImplicitlyExpandTargetFramework)' == ''">true</ImplicitlyExpandTargetFramework>

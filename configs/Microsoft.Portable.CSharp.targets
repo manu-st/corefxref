@@ -15,10 +15,23 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <PortableEnableXamlTargets>true</PortableEnableXamlTargets>
+        <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     </PropertyGroup>
-    
-    <Import Project="Microsoft.Portable.Common.targets" />
+
+    <Import Project="$(MSBuildExtensionsPath)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.Common.targets" />
+
+    <PropertyGroup>
+        <TargetPlatformIdentifier>CoreFX</TargetPlatformIdentifier>
+        <TargetFrameworkIdentifier>CoreCLR</TargetFrameworkIdentifier>
+        <TargetFrameworkMonikerDisplayName>Core CLR</TargetFrameworkMonikerDisplayName>
+        <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+        <NoStdLib>true</NoStdLib>
+    </PropertyGroup>
+
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.Targets" />
-    <Import Project="Microsoft.Portable.Core.targets" />
-  
+    <Import Project="$(MSBuildExtensionsPath)\Microsoft\Portable\Microsoft.Portable.Core.targets" />
+
+    <Target Name="_CheckForInvalidTargetFrameworkProfile"
+            AfterTargets="_CheckForInvalidConfigurationAndPlatform" />
+
 </Project>

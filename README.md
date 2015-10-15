@@ -13,5 +13,5 @@ In addition make sure to define the following properties **TargetFrameworkRootPa
 For example, if you have checked out the code in **C:\CoreFX**, then you should add:
 ```
   <TargetFrameworkRootPath>C:\CoreFX</TargetFrameworkRootPath>
-  <FrameworkPathOverride>C:\CoreFX\CoreCLR\v5.0</FrameworkPathOverride>
+  <FrameworkPathOverride>$(TargetFrameworkRootPath)\CoreCLR\v5.0</FrameworkPathOverride>
 ```
